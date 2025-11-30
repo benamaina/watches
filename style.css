@@ -1,0 +1,544 @@
+/* Variables de color */
+:root {
+    --primary-blue: #007bff; /* Azul vibrante */
+    --primary-lime: #a7ff00; /* Lima neón */
+    --primary-purple: #8a2be2; /* Púrpura vibrante */
+    --primary-orange: #ffa500; /* Naranja solar */
+    --accent-red: #ff0000; /* Rojo acento (para botones, etc.) */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-dark: #1a1a1a;
+    --bg-light: #f9f9f9;
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--bg-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--text-light);
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent-red);
+    color: var(--text-light);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: color-mix(in srgb, var(--accent-red) 90%, black);
+}
+
+.secondary-btn {
+    background: var(--primary-lime);
+    color: var(--text-dark);
+}
+
+.secondary-btn:hover {
+    background: color-mix(in srgb, var(--primary-lime) 90%, black);
+}
+
+/* --- SECCIÓN HERO Y FEATURES (Página de Inicio) --- */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/fondorelojes.jpg') no-repeat center center/cover;
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Features Section */
+.features {
+    background: var(--bg-light);
+    padding: 80px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+/* Estilos para el contenedor de imágenes rotatorias (página de inicio) */
+.image-slider {
+    position: relative; 
+    width: 100%;
+    height: 200px;
+    overflow: hidden; 
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.image-slider img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+}
+
+.image-slider img.active {
+    opacity: 1; 
+}
+
+/* Explore Section (Galería de modelos fijos en la página de inicio) */
+.explore {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    padding: 80px 0;
+    text-align: center;
+}
+.explore h2, .explore p, .explore h3 {
+    color: var(--text-light);
+}
+
+.color-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.color-card {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.collection-watch {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 10px; 
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.color-card h3 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* --- FIN SECCIÓN HERO Y FEATURES --- */
+
+
+/* ================================================= */
+/* 🚀 ESTILOS PARA CUSTOMIZER.HTML (CORRECCIONES) */
+/* ================================================= */
+
+.customizer {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+/* Diseño Flex para el Visor (Izquierda) y Controles (Derecha) */
+.customizer-layout {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: flex-start; 
+    gap: 40px;
+}
+
+/* 1. VISOR DEL RELOJ (Contenedor de capas) */
+.watch-viewer {
+    position: relative;
+    width: 350px; /* Tamaño fijo */
+    height: 550px; /* 🚨 AUMENTADO para dar longitud a la correa */
+    margin: 0 auto 40px auto; 
+    flex-shrink: 0; 
+    overflow: hidden; 
+    z-index: 10; 
+    border: 1px solid #eee; 
+    border-radius: 10px;
+    background-color: #fff; 
+}
+
+/* Capas Individuales del Reloj */
+.watch-component {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* 🚨 ORDEN DE APILAMIENTO CORREGIDO: Esfera sobre Bisel */
+.watch-component.strap-bottom { 
+    z-index: 1; 
+} 
+.watch-component.strap-top { 
+    z-index: 2; 
+} 
+.watch-component.bezel { 
+    z-index: 3; /* Bisel/Caja va DEBAJO del Dial */
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+} 
+.watch-component.dial { 
+    z-index: 4; /* Esfera va ENCIMA del Bisel/Caja */
+    width: 70%; 
+    height: 70%;
+    top: 15%; 
+    left: 15%; /* Valor base de centrado */
+} 
+
+/* Ajustes de centrado manual para esferas asimétricas (ejemplo) */
+.watch-component.dial-blanco {
+    left: 14.5%; /* Ejemplo de ajuste si dialblanco necesita ir 0.5% a la izquierda */
+    top: 15.2%; /* Ejemplo de ajuste si dialblanco necesita ir 0.2% abajo */
+}
+/* ... otros ajustes individuales si los usas ... */
+
+
+/* 2. CONTROLES DE SELECCIÓN (Botones) */
+.watch-controls {
+    flex-grow: 1;
+    max-width: 500px; 
+    z-index: 5; 
+    padding-top: 20px; 
+}
+
+.selector-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.selector-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    opacity: 0.8;
+}
+
+.selector-btn:hover {
+    opacity: 1;
+}
+
+.selector-btn.active {
+    border-color: var(--accent-red); 
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Ajuste del botón aleatorio */
+#random-btn {
+    margin-left: -20px; /* Desplaza el botón un poco a la izquierda */
+}
+
+/* Clases de color para los botones */
+.blue-bg { background-color: var(--primary-blue); }
+.green-bg { background-color: var(--primary-lime); }
+.black-bg { background-color: var(--bg-dark); }
+.white-bg { background-color: var(--bg-light); border: 1px solid #ccc; }
+.pink-bg { background-color: #ff69b4; } 
+
+
+/* ================================================= */
+/* 🌍 ESTILOS PARA DESCUBRIR.HTML (PÁGINA DE CONTENIDO) */
+/* ================================================= */
+
+/* Hero Section para Descubrir */
+.hero-discover {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/fondo-descubrir.jpg') no-repeat center center/cover;
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 0;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-discover h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-discover p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Secciones de Contenido General */
+.about-section, .audience-section, .specs-section, .photo-gallery {
+    padding: 80px 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-light); 
+}
+
+.about-section .container,
+.audience-section .container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px;
+    align-items: center;
+}
+
+.content-left, .content-right {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.about-section .content-right,
+.audience-section .content-left {
+    max-width: 500px; 
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-section h2, .audience-section h2, .specs-section h2, .photo-gallery h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.about-section ul, .audience-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.about-section ul li, .audience-section ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Iconos para listas */
+.about-section ul li::before, .audience-section ul li::before {
+    content: '✔️'; 
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-size: 1.2em;
+}
+
+
+/* Sección de Especificaciones */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.spec-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.spec-item img {
+    max-width: 80px;
+    margin-bottom: 15px;
+}
+
+.spec-item h3 {
+    color: var(--primary-blue);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Galería de Fotos Adicionales */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.img-gallery {
+    width: 100%;
+    /* 🚨 CAMBIO CLAVE: Elimina la altura fija y hazla proporcional al ancho */
+    height: 0; /* Reinicia la altura */
+    padding-bottom: 100%; /* Esto hace que la altura sea igual al 100% del ancho, manteniendo una relación de aspecto 1:1 (cuadrada) */
+    
+    object-fit: cover; /* Mantiene la imagen cubriendo el espacio */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    /* Añade también esto para que la imagen se posicione correctamente dentro del "padding-bottom" */
+    position: relative; /* Contenedor para la imagen */
+    overflow: hidden; /* Asegura que nada se desborde si hay algún error */
+}
+
+/* Y ahora, la imagen dentro del contenedor debe ser absoluta para ocupar ese espacio */
+.img-gallery img { /* 🚨 NECESITAS ENVOLVER TUS IMÁGENES EN UN CONTENEDOR SI NO LO HAS HECHO */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hará que la imagen llene el espacio cuadrado */
+}
+
+
+/* --- SECCIÓN CTA Y FOOTER --- */
+
+/* Call to Action Section */
+.cta {
+    background: var(--primary-blue); 
+    color: var(--text-light);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta h2 {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+    background: var(--bg-dark);
+    color: #aaa;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p, .hero-discover p {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .feature-grid, .color-gallery, .specs-grid, .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste de customizer para móviles */
+    .customizer-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    .watch-viewer {
+        width: 300px; 
+        height: 450px; /* Altura ajustada para móvil */
+    }
+    
+    /* Descubrir.html Responsive */
+    .about-section .container,
+    .audience-section .container {
+        flex-direction: column; 
+    }
+    .img-gallery {
+        height: 250px;
+    }
+}

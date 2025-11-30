@@ -3,338 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BENAMAINA WATCHES - Precisión Elevada</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* ------------------------------------- */
-        /* CSS BÁSICO Y TIPOGRAFÍA */
-        /* ------------------------------------- */
-        :root {
-            --color-principal: #1f1f1f; /* Negro casi total */
-            --color-secundario: #C3B177; /* Dorado sutil */
-            --color-fondo: #f5f5f5;
-            --color-texto: #333333;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: var(--color-texto);
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-fondo);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--color-principal);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        h1 { font-size: 3em; }
-        h2 { font-size: 2.5em; }
-        h3 { font-size: 1.8em; }
-
-        /* ------------------------------------- */
-        /* SECCIÓN HERO Y CTA */
-        /* ------------------------------------- */
-        .hero {
-            height: 80vh;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            flex-direction: column;
-            text-align: center;
-            background-color: var(--color-principal);
-            color: white;
-            padding: 50px 0;
-            /* --- CAMBIOS CLAVE PARA IMAGEN DE FONDO ÚNICA --- */
-            background-image: url('images/logobw.jpg'); 
-            background-size: cover; /* Asegura que la imagen cubra todo el espacio */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat; /* <-- ESTO EVITA LA REPETICIÓN */
-    /* ------------------------------------------------ */
-    
-    position: relative;
-        }
-
-        .hero::before { /* Overlay oscuro para mejor legibilidad del texto */
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6); 
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            text-align: right;
-            /* Añadimos padding para separarlo de los bordes derecho e inferior */
-    padding: 0 50px 50px 0;
-    width: 90%;
-    max-width: 400px; /* Limita el ancho del contenido para que no se extienda demasiado */
-    margin: 0; /* Centra el contenido horizontalmente */
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 3.2em; /* Reducimos el tamaño de la fuente principal */
-    margin-bottom: 5px; /* Reducimos el margen entre los H1 */
-    line-height: 1.2; /* Ajustamos el interlineado */
-    text-align: right; /* Aseguramos que los H1 se alineen a la derecha */
-        }
-
-        .hero p {
-            font-size: 1em; /* Reducimos el tamaño del párrafo */
-    max-width: none; /* Hacemos el párrafo más estrecho */
-    margin: 15px auto 30px; /* Ajustamos márgenes */
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--color-secundario);
-            color: var(--color-principal);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 2px;
-            transition: background-color 0.3s;
-            margin-top: 20px; /* Añadido margen para separar del texto/tablas */
-        }
-
-        .cta-button:hover {
-            background-color: #D6C298;
-        }
-
-        /* ------------------------------------- */
-        /* PROPUESTA DE VALOR */
-        /* ------------------------------------- */
-        .value-prop {
-            padding: 80px 0;
-            text-align: center;
-            background-color: white;
-        }
-
-        .value-grid {
-            display: flex;
-            justify-content: space-around;
-            gap: 30px;
-            margin-top: 40px;
-            text-align: left;
-        }
-
-        .value-item {
-            flex-basis: 30%;
-        }
-
-        .value-item h3 {
-            text-align: left;
-            border-bottom: 2px solid var(--color-secundario);
-            padding-bottom: 10px;
-        }
-
-        /* ------------------------------------- */
-        /* SECCIONES DE COLECCIÓN Y TABLAS */
-        /* ------------------------------------- */
-        .collection-section {
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .collection-section img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-
-        .model-specs {
-            background-color: white;
-            padding: 40px 20px;
-            margin-top: 50px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            text-align: left;
-        }
-
-        .specs-table th, .specs-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .specs-table th {
-            background-color: #eee;
-            font-weight: bold;
-            color: var(--color-principal);
-        }
-
-        /* Adaptabilidad básica */
-        @media (max-width: 768px) {
-            .value-grid {
-                flex-direction: column;
-            }
-            .hero h1 {
-                font-size: 3em;
-            }
-            .specs-table {
-                font-size: 0.85em;
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
-        }
-    </style>
+    <title>TIME DIVER - Tu Reloj, Tu Estilo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="hero">
-        <div class="hero-content">
-            <h1></h1>
-            <h1></h1>
-            <h3>BENAMAINA WATCHES</h3> Calidad rigurosa, accesible para el nuevo coleccionista.</p>
-            <a href="#collections" class="cta-button">EXPLORA LA COLECCIÓN</a>
+        <div class="container">
+            <h1>BM Watches</h1>
+            <h2>TIME DIVER SERIE</h2>
+            <p>Sumérgete en el color. Tu reloj, tu estilo, siempre a tiempo.</p>
+            <a href="crear.html" class="btn">¡Crea el Tuyo!</a>
         </div>
     </header>
 
-    <section class="value-prop">
+    <section id="features" class="features">
         <div class="container">
-            <h2>Más Allá de la Medición: La Filosofía Benamaina.</h2>
-            
-            <p style="max-width: 800px; margin: 0 auto 50px;">En un mundo que se mueve a la velocidad de la luz, el verdadero lujo se encuentra en el control del tiempo. **Benamaina Watches** nace de la convicción de que la ingeniería de alta relojería debe ser sinónimo de durabilidad, diseño atemporal y valor accesible. No solo construimos instrumentos para medir el tiempo; creamos legados.</p>
-
-            <div class="value-grid">
-                <div class="value-item">
-                    <h3>Tolerancia Cero a lo Ordinario</h3>
-                    <p>Nuestra promesa de calidad se basa en la **rigurosidad industrial**. Acero Quirúrgico 316L, Titanio y Cristal de Zafiro son la base inquebrantable de cada reloj, garantizando una durabilidad extrema y una resistencia a la corrosión que perdura décadas.</p>
+            <h1 style="color: orange;">Personalización al Máximo</h1>
+            <div class="feature-grid">
+                
+                <div class="feature-item" id="esferas-item">
+                    <div class="image-slider" id="esferas-slider">
+                        </div>
+                    <h3>Esferas Vibrantes</h3>
+                    <p>Cuatro colores únicos para reflejar tu personalidad. ¡Elige el tuyo!</p>
                 </div>
-                <div class="value-item">
-                    <h3>El Espíritu del Lugar</h3>
-                    <p>Benamaina evoca un sentido de patrimonio y profundidad histórica. Nuestros diseños reflejan esta dualidad: robustez moderna y líneas clásicas. Cada acabado es un homenaje a la arquitectura y la naturaleza que inspiran nuestro nombre.</p>
+                
+                <div class="feature-item" id="biseles-item">
+                    <div class="image-slider" id="biseles-slider">
+                        </div>
+                    <h3>Biseles Intercambiables</h3>
+                    <p>Cambia tu look en segundos con nuestros biseles de diseño. ¡Combina y crea!</p>
                 </div>
-                <div class="value-item">
-                    <h3>Mecánica de Confianza</h3>
-                    <p>Seleccionamos movimientos de la más alta confianza. Componentes automáticos y de cuarzo de ingeniería probada, garantizando una precisión que rara vez se encuentra fuera del segmento de ultra-lujo. Cada reloj es inspeccionado meticulosamente.</p>
+                
+                <div class="feature-item" id="correas-item">
+                    <div class="image-slider" id="correas-slider">
+                        </div>
+                    <h3>Correas de Silicona</h3>
+                    <p>Suaves, resistentes y en colores divertidos. Perfectas para tu día a día.</p>
                 </div>
+                
             </div>
         </div>
     </section>
+    
+    <script src="slider.js"></script>
 
-    <section id="collections" class="collection-section">
+    <section id="explore" class="explore">
         <div class="container">
-            <h2>🔱 THE DIVER SERIES: Inmersión Sin Límites.</h2>
-            <p>Construidos para resistir los entornos más duros. Biseles cerámicos, luminiscencia BGW9 y 200m de resistencia al agua.</p>
-            
-            <img src="images/diverserie.jpg" alt="Modelos de la Serie Diver: Azul Marino, Phantom Deep, Atlantis Green">
-            
-            <div class="model-specs">
-                <h3>Especificaciones Detalladas: Serie DIVER</h3>
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th>Especificación de la Serie</th> 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Material de Caja</td><td>Acero Inoxidable 316L</td></tr>
-                        <tr><td>Diámetro / Grosor</td><td>40 mm / 13 mm</td></tr>
-                        <tr><td>Acabados de Caja</td><td>Cepillado y Pulido (Clásico)</td></tr>
-                        <tr><td>Bisel</td><td>Cerámico (Unidireccional, 120 clicks)</td></tr>
-                        <tr><td>Cristal</td><td>Zafiro plano con AR interno</td></tr>
-                        <tr><td>Movimiento</td><td>Automático (Seiko NH35 o similar)</td></tr>
-                        <tr><td>Resistencia Agua (WR)</td><td>200 metros (20 ATM)</td></tr>
-                        <tr><td>Luminiscencia</td><td>BGW9 (Índices Aplicados y Agujas)</td></tr>
-                        <tr><td>Opciones de Correa</td><td>Brazalete de Acero o Goma FKM</td></tr>
-                    </tbody>
-                </table>
-                <a href="diver.html" class="cta-button">VER TODOS LOS MODELOS DIVER</a>
+            <h2>Explora Nuestra Colección</h2>
+            <p class="subtitle">Combina esferas y biseles para crear el reloj perfecto para ti.</p>
+            <div class="color-card blue">
+                <img src="images/collection.jpg" alt="diver collection" class="collection-watch">
+                
             </div>
+
+                           
+            </div>
+            <a href="descubrir.html" class="btn secondary-btn">¡Descubre Más!</a>
         </div>
     </section>
 
-    <section class="collection-section" style="background-color: #ededed;">
+    <section id="cta" class="cta">
         <div class="container">
-            <h2>🏎️ THE CHRONOGRAPH SERIES: Velocidad y Precisión.</h2>
-            <p>Cronógrafos ligeros de Titanio diseñados para la pista y la elegancia. Esferas Panda y Zafiro Abovedado.</p>
-
-            <img src="images/cronoserie.jpg" alt="Modelos de la Serie Chronograph: Le Mans 42, Monza GT, Carrera Silver">
-
-            <div class="model-specs">
-                <h3>Especificaciones Detalladas: Serie CRONO</h3>
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th>Especificación de la Serie</th> 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Material de Caja</td><td>Titanio Grado 2/5 (Totalmente Cepillado)</td></tr>
-                        <tr><td>Diámetro / Grosor</td><td>42 mm / 14 mm</td></tr>
-                        <tr><td>Cristal</td><td>Zafiro **Abovedado** con AR interno</td></tr>
-                        <tr><td>Movimiento</td><td>Cuarzo Cronógrafo (Meca-Quartz VK64 o similar)</td></tr>
-                        <tr><td>Funcionalidad</td><td>Cronógrafo, Fechador, Taquímetro Fijo</td></tr>
-                        <tr><td>Resistencia Agua (WR)</td><td>50 metros (5 ATM)</td></tr>
-                        <tr><td>Estética de Esfera</td><td>Diseño "Panda" o "Reverse Panda"</td></tr>
-                        <tr><td>Opciones de Correa</td><td>Piel Racing, Piel Vintage o Brazalete de Acero</td></tr>
-                    </tbody>
-                </table>
-                <a href="crono.html" class="cta-button">VER TODOS LOS CRONÓGRAFOS</a>
-            </div>
+            <h2>¿Listo para sumergirte?</h2>
+            <p>No esperes más para llevar tu estilo al siguiente nivel.</p>
+            <a href="#" class="btn">¡Pide el Tuyo Ahora!</a>
         </div>
     </section>
 
-    <section class="collection-section">
+    <footer>
         <div class="container">
-            <h2>⛺ THE FIELD SERIES: Legibilidad Absoluta.</h2>
-            <p>Diseño utilitario de 38mm, acabado micro-cepillado. El compañero perfecto para la aventura diaria.</p>
-
-            <img src="images/fieldserie.jpg" alt="Modelos de la Serie Field: Sierra Green, Explorer Grey, Basecamp White">
-
-            <div class="model-specs">
-                <h3>Especificaciones Detalladas: Serie FIELD</h3>
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th>Especificación de la Serie</th> 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Material de Caja</td><td>Acero Inoxidable 316L</td></tr>
-                        <tr><td>Diámetro / Grosor</td><td>38 mm / 11 mm (Diseño Compacto)</td></tr>
-                        <tr><td>Acabado de Caja</td><td>Micro-Cepillado (Uniforme, Utilitario)</td></tr>
-                        <tr><td>Cristal</td><td>Zafiro plano con AR interno</td></tr>
-                        <tr><td>Movimiento</td><td>Automático (Seiko NH35 - Tres agujas, Sin fecha)</td></tr>
-                        <tr><td>Legibilidad</td><td>Máxima (Luminiscencia C3 de alta intensidad)</td></tr>
-                        <tr><td>Resistencia Agua (WR)</td><td>100 metros (10 ATM)</td></tr>
-                        <tr><td>Opciones de Correa</td><td>NATO Nylon o Piel Genuina</td></tr>
-                    </tbody>
-                </table>
-                <a href="field.html" class="cta-button">VER TODOS LOS FIELD WATCHES</a>
-            </div>
-        </div>
-    </section>
-
-    <footer style="background-color: var(--color-principal); color: white; padding: 40px 0; text-align: center;">
-        <div class="container">
-            <p>&copy; 2025 BENAMAINA WATCHES. Horlogerie de Précision.</p>
-            <p>Suscríbete para ser el primero en recibir noticias: [FORMULARIO DE NEWSLETTER AQUÍ]</p>
+            <p>&copy; 2023 TIME DIVER. Todos los derechos reservados.</p>
         </div>
     </footer>
-
 </body>
 </html>

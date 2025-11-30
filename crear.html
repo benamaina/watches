@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME DIVER - Diseña tu Reloj</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header style="background-color: var(--bg-dark); padding: 15px 0;">
+        <div class="container">
+            <a href="index.html" style="color: var(--text-light); text-decoration: none; font-weight: 700;">&larr; Volver a la Colección</a>
+            <h1 style="color: var(--text-light); font-size: 2em; margin: 0; text-align: center;">TIME DIVER Customizer</h1>
+        </div>
+    </header>
+
+    <section id="customizer" class="customizer">
+        <div class="container">
+            <h2>Diseña tu TIME DIVER</h2>
+            <p class="subtitle">¡Combina y descubre tu estilo único!</p>
+
+            <div class="customizer-layout">
+                
+                <div class="watch-viewer">
+                    
+                    <img id="strap-display-2" src="images/correa2azul.png" alt="Correa Inferior" class="watch-component strap-bottom">
+                    
+                    <img id="strap-display-1" src="images/correa1azul.png" alt="Correa Superior" class="watch-component strap-top">
+                    
+                    <img id="bezel-display" src="images/biselnegro.png" alt="Bisel" class="watch-component bezel">
+                    
+                    <img id="dial-display" src="images/dialazul.png" alt="Esfera" class="watch-component dial dial-azul">
+                </div>
+
+                <div class="watch-controls">
+                    
+                    <h3>1. Elige Esfera</h3>
+                    <div class="selector-group" data-component="dial">
+                        <button data-file="dialazul.png" class="selector-btn blue-bg active"></button>
+                        <button data-file="dialverde.png" class="selector-btn green-bg"></button>
+                        <button data-file="dialnegro.png" class="selector-btn black-bg"></button>
+                        <button data-file="dialblanco.png" class="selector-btn white-bg"></button>
+                    </div>
+                    
+                    <h3>2. Elige Bisel</h3>
+                    <div class="selector-group" data-component="bezel">
+                        <button data-file="biselverde.png" class="selector-btn green-bg active"></button>
+                        <button data-file="biselazul.png" class="selector-btn blue-bg"></button>
+                        <button data-file="biselblanco.png" class="selector-btn white-bg"></button>
+                        <button data-file="biselnegro.png" class="selector-btn black-bg"></button>
+                    </div>
+
+                    <h3>3. Elige Correa</h3>
+                    <div class="selector-group" data-component="strap">
+                        <button data-file="azul" class="selector-btn blue-bg active"></button>
+                        <button data-file="verde" class="selector-btn green-bg"></button>
+                        <button data-file="rosa" class="selector-btn pink-bg"></button>
+                        <button data-file="negro" class="selector-btn black-bg"></button>
+                    </div>
+                    <div> 
+                        <button id="random-btn" class="btn mt-3" style="margin-top: 10px; margin-left: -40px;"> 
+                            Combinación Aleatoria 🎲
+                        </button>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 TIME DIVER. Diseño creado en el Customizer.</p>
+        </div>
+    </footer>
+    
+    <script src="customizer.js"></script>
+</body>
+</html>
